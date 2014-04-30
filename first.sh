@@ -8,7 +8,6 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 
 # install softwares
-sudo apt-get install -y openssh-server openssh-client
 sudo apt-get install -y vim
 
 # install apache, mysql, php
@@ -31,6 +30,7 @@ sudo sed -i 's/write_enable=NO/write_enable=YES/g' /etc/vsftpd.conf
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
 sudo sed -i 's/rsa_cert_file.*/rsa_cert_file=\/etc\/ssl\/private\/vsftpd.pem/g' /etc/vsftpd.conf
 sudo sed -i 's/rsa_private_key_file.*/rsa_private_key_file=\/etc\/ssl\/private\/vsftpd.pem/g' /etc/vsftpd.conf
+echo "ssl_enable=YES" | sudo tee -a /etc/vsftpd.conf > /dev/null
 echo "allow_anon_ssl=NO" | sudo tee -a /etc/vsftpd.conf > /dev/null
 echo "force_local_data_ssl=YES" | sudo tee -a /etc/vsftpd.conf > /dev/null
 echo "force_local_logins_ssl=YES" | sudo tee -a /etc/vsftpd.conf > /dev/null
