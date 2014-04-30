@@ -9,6 +9,8 @@ sudo apt-get -y dist-upgrade
 
 # install softwares
 sudo apt-get install -y vim
+sudo apt-get install -y rng-tools
+echo "HRNGDEVICE=/dev/urandom" | sudo tee -a /etc/default/rng-tools > /dev/null
 
 # install apache, mysql, php
 sudo apt-get install -y apache2
