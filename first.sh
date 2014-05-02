@@ -9,6 +9,7 @@ sudo apt-get -y dist-upgrade
 
 # install softwares
 sudo apt-get install -y vim
+sudo apt-get install -y screen
 sudo apt-get install -y rng-tools
 echo "HRNGDEVICE=/dev/urandom" | sudo tee -a /etc/default/rng-tools > /dev/null
 
@@ -48,6 +49,7 @@ sudo apt-get install -y curl
 \curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install 2.1.1
+rvm use --default ruby-2.1.1@global
 
 # setup github
 ssh-keygen -t rsa -C "insinoa@gmail.com"
