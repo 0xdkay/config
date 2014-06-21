@@ -29,8 +29,10 @@ sudo service apache2 restart
 
 # install vsftpd with ftps
 sudo apt-get install -y vsftpd
-sudo sed -i 's/\#write_enable=.*/write_enable=YES/g' /etc/vsftpd.conf
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
+sudo sed -i 's/\anonymous_enable=.*/anonymous_enable=NO/g' /etc/vsftpd.conf
+sudo sed -i 's/\#local_enable=.*/local_enable=YES/g' /etc/vsftpd.conf
+sudo sed -i 's/\#write_enable=.*/write_enable=YES/g' /etc/vsftpd.conf
 sudo sed -i 's/rsa_cert_file.*/rsa_cert_file=\/etc\/ssl\/private\/vsftpd.pem/g' /etc/vsftpd.conf
 sudo sed -i 's/rsa_private_key_file.*/rsa_private_key_file=\/etc\/ssl\/private\/vsftpd.pem/g' /etc/vsftpd.conf
 echo "ssl_enable=YES" | sudo tee -a /etc/vsftpd.conf > /dev/null
