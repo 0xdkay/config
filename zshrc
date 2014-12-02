@@ -53,3 +53,7 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+if [ "$TERM" != "screen-256color" ]; then
+    export TERM="xterm-256color"
+fi
+

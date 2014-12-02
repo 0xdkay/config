@@ -95,6 +95,7 @@ autocmd FileType ruby set omnifunc=rubycomplete#Complete
 "autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 "autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 autocmd FileType python set omnifunc=pythoncomplete#Complete " python completion
+autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
 
 map <silent> <F7> :make<CR>:bo cw 5<CR> "set F7 to make & show compile error
 imap <silent> <F7> <C-c>:make<CR>:bo cw 5<CR>
@@ -217,4 +218,3 @@ let g:syntastic_python_flake8_args='--select=E101,E112,E113,E721,W601,W602,W603,
 if $TMUX == ''
   set clipboard+=unnamed
 endif
-
