@@ -214,3 +214,7 @@ au InsertLeave * set nopaste
 "let g:syntastic_python_flake8_args='--ignore=E111,E201,E202,E203,E231'
 let g:syntastic_python_flake8_args='--select=E101,E112,E113,E721,W601,W602,W603,W604,F401,F402,F404,F811,F812,F821,F822,F823,F831,F841,N801,N802,N803,N804,N805,N806,N811,N812,N813,N814'
 
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
+

@@ -67,7 +67,7 @@
 # ===============================================================
   autodetach            on              # default: on
   crlf                  off             # default: off
-  deflogin              off             # default: on
+#  deflogin              off             # default: on
 # defsilence            off             # default: off
   hardcopy_append       on              # default: off
 # nethack               on              # default: off
@@ -109,8 +109,8 @@
 # shell:  Default process started in screen's windows.
 # Makes it possible to use a different shell inside screen
 # than is set as the default login shell.  Halleluja! :-)
-# shell                 zsh
-  shell                 bash
+  shell                 zsh
+# shell                 bash
 # shell                 ksh
 #
 # ===============================================================
@@ -433,7 +433,7 @@
 # bind L login
 # bind M monitor
 # bind N number
-  bind O login off
+#  bind O login off
 # bind Q only
   bind S split
 # bind W width

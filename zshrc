@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 
 # Example aliases
@@ -36,7 +36,6 @@ else
 	plugins=(git brew extract gem)
 fi
 
-
 source $ZSH/oh-my-zsh.sh
 export CLICOLOR=1export LSCOLORS=ExFxCxDxBxegedabagacad
 
@@ -44,11 +43,13 @@ export CLICOLOR=1export LSCOLORS=ExFxCxDxBxegedabagacad
 if [[ `uname -a | grep Darwin` != '' ]]; then
 	export PATH=/usr/local/bin:$PATH
 fi
-PROMPT=$'%{\e[01;32m%}%n@%m%{\e[00m%}:%{\e[01;34m%}%5c%{\e[00m%}\$ '
+#PROMPT=$'%{\e[01;32m%}%n@%m%{\e[00m%}:%{\e[01;34m%}%5c%{\e[00m%}\$ '
 #TERM="screen-256color"
+#TERM="xterm-256color"
 
+#PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
