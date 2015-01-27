@@ -3,18 +3,20 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 sudo apt-get install -y exuberant-ctags zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+cp bashrc ~/.bashrc
+chsh -s `which zsh`
+exec $SHELL
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +PluginInstall +qall
 mv $DIR/screenrc ~/.screenrc
 mv $DIR/vimfiles ~/.vim
 mv $DIR/vimrc ~/.vimrc
 mv $DIR/tmux.conf ~/.tmux.conf
-cp bashrc ~/.bashrc
 mv $DIR/oh-my-zsh ~/.oh-my-zsh
 mv $DIR/zshrc ~/.zshrc
 mv $DIR/gitignore_global ~/.gitignore_global
 mv $DIR/gitconfig ~/.gitconfig
-chsh -s `which zsh`
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +PluginInstall +qall
 
 
 # install ruby dependencies
@@ -22,7 +24,7 @@ sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libr
 
 
 # install rbenv
-git clone git://github.com/sstephenson/rbenv.git .rbenv
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 exec $SHELL
