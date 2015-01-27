@@ -48,7 +48,7 @@ fi
 #TERM="xterm-256color"
 
 #PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

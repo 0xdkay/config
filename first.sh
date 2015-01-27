@@ -48,10 +48,6 @@ sudo service vsftpd restart
 
 # install rvm
 sudo apt-get install -y curl
-\curl -L https://get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-rvm install 2.1.1
-rvm use --default ruby-2.1.1@global
 
 # setup github
 ssh-keygen -t rsa -C "insinoa@gmail.com"
