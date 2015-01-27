@@ -46,9 +46,6 @@ echo "require_ssl_reuse=NO" | sudo tee -a /etc/vsftpd.conf > /dev/null
 echo "ssl_ciphers=HIGH" | sudo tee -a /etc/vsftpd.conf > /dev/null
 sudo service vsftpd restart
 
-# install rvm
-sudo apt-get install -y curl
-
 # setup github
 ssh-keygen -t rsa -C "insinoa@gmail.com"
 eval $(ssh-agent)
