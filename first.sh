@@ -47,7 +47,7 @@ echo "ssl_ciphers=HIGH" | sudo tee -a /etc/vsftpd.conf > /dev/null
 sudo service vsftpd restart
 
 # setup github
-ssh-keygen -t rsa -C "insinoa@gmail.com"
+ssh-keygen -t rsa -C "0xdkay@gmail.com"
 eval $(ssh-agent)
 ssh-add ~/.ssh/id_rsa
 echo "need to add below public key to github"
